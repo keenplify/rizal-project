@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Marhey:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/novels.css">
+    <link rel="stylesheet" href="./css/knplfy.css">
+    <link rel="icon" href="/img/icon.png">
+    <title>Rizal Appreciation: Who is Rizal?</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+
+<body>
+    <header>
+        <h1>Rizal</h1>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="index.html">Who is Rizal</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Family.html">Family</a></li>
+                <li><a href="novels.html">Novels</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container h-antinav" id="container" id="whois">
+        <div class="container-1">
+            <div style="display: flex; justify-content: center; flex-direction: column; padding: 0 4em 0 2em;">
+                <div  class="rizal-whois">
+                    <h1 style="margin-bottom: .1em;">Who is <span style="background: linear-gradient(to right, #f7ff00, #db36a4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Jose Rizal?</span></h1>
+                    <p style="margin-bottom: 1em">
+                        José Protasio Rizal Mercado y Alonso Realonda (born June 19, 1861, Calamba, Philippines and died December 30, 1896, Manila) is one of the most revered figures in Philippine history. He was a multifaceted intellectual and a political activist, best known for his political writings that inspired the Philippine revolution and ultimately led to his execution by the Spanish colonizers. Rizal was also a physician who trained in ophthalmology under 2 prominent European ophthalmologists, Louis de Wecker and Otto Becker.
+                    </p>
+                    <p>
+                        During 1880s he published his renowed novel, Noli me Tangere (The Social Cancer) and was followed by a sequel, El FIlibusterismo which both spoke of the evils of Spanish rule in the Philippines.
+                    </p>
+                </div>
+            </div>
+            <div class="rizal-container animate__animated animate__rotateInDownRight" style="position: relative;">
+                <img src="./img/rizal-colored.jpg" class="rizal-hero">
+                <img src="./img/nolimetangere.jpg" class="noli-me-tangere">
+                <img src="./img/elfili.jpg" class="el-fili">
+                <img src="./img/feather-pen.png" class="feather-pen">
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js" integrity="sha512-fq89yHimK/w687Yjr89Vml8ax1HBNfN1k9IRi/nu91AmCrIWc/yQz5jkJKHoUWxGnuMcMwm7vRY50S7rZsXoDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    VANTA.DOTS({
+        el: "#container",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        showLines: false
+    })
+
+    let rizal = document.querySelector(".rizal-hero");
+    let noliMeTangere = document.querySelector(".noli-me-tangere");
+    let elFili = document.querySelector(".el-fili");
+    let featherPen = document.querySelector(".feather-pen");
+
+    document.addEventListener('mousemove', (event) => {
+        var pageX = event.pageX;
+        var pageY = event.pageY;
+
+        var numX = 0;
+        var numY = 0;
+
+        var bodyX = document.body.clientWidth;
+        if (bodyX < 768) return;
+        var bodyY = document.body.clientHeight;
+
+        var rotX = (((pageX - bodyX) / (-15 - bodyX)) * -30)+15;
+        var rotY = (((pageY - bodyY) / (-15 - bodyY)) * -30)+15;
+
+        rizal.style.transform = `translate(${rotX * .5}%, ${rotY * .5}%)`;
+        noliMeTangere.style.transform = `translate(${rotX * .8}%, ${rotY * .8}%) rotate(-10deg)`;
+        elFili.style.transform = `translate(${rotX * -.5}%, ${rotY * -.5}%)`;
+        featherPen.style.transform = `translate(${rotX * -.5}%, ${rotY * -.5}%) rotate(${rotX * -.5}deg)`;
+    });
+    </script>
+</body>
+</html>

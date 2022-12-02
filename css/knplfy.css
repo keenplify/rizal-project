@@ -1,0 +1,103 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 2em;
+}
+
+.container-2 {
+    display: grid;
+    width: 100%;
+    max-width: 1024px;
+    margin-top: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+    .container-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin-top: 20em;
+    }
+
+    .noli-me-tangere {
+        left: 10% !important;
+    }
+
+    .el-fili {
+        right: 5% !important;
+    }
+
+    .feather-pen {
+        right: 20% !important;
+        top: 60% !important;
+    }
+
+    .rizal-container {
+        order: -1;
+        margin-top: 2em;
+    }
+}
+
+.h-antinav {
+    height: calc(100vh - 93px);
+}
+
+.rizal-whois {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 2em;
+    padding: 2em
+}
+
+.rizal-hero {
+    height: 512px;
+    border-radius: 50%;
+}
+
+.rizal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%
+}
+
+.feather-pen {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 50%;
+    max-width: 100%;
+    transform: translate(45%, 0) rotate(15deg);
+    pointer-events: none;
+}
+
+.noli-me-tangere {
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    height: 40%;
+    max-width: 100%;
+    border-radius: 1em;
+    pointer-events: none;
+}
+
+.el-fili {
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    height: 30%;
+    border-radius: 2em;
+    max-width: 100%;
+    pointer-events: none;
+}

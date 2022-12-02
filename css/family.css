@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: #24252a;      
+}
+
+
+li,a,button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #eff0f1;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-bottom: 1px solid #201f1f;
+    
+}
+header h1 {
+    color: white;
+    cursor: pointer;
+}
+
+.navlinks li a {
+    transition: none 0.3s ease 0s;
+}
+
+.navlinks li a:hover {
+    color: #0088a9;
+    border-bottom: 3px solid #0088a9; ;
+}
+main .famcon{
+    width: 80%;
+    padding-top: 10vh;
+    margin: 0 auto;   
+}
+main .mercado{
+    color:#eff0f1;
+    text-align: center;
+    
+}
+main .parents{
+    display: flex;
+    padding: 0;
+    margin: 100px 0;
+    justify-content: space-around;
+    
+}
+
+.parents img {
+        width: 300px;           
+        height: 300px;  
+        object-fit: cover;  
+        margin-left: 10px;  
+        border-radius: 30px;
+}
+.parents h2 {
+color: #eff0f1;
+text-align: center;
+margin-top: 20px;
+}
+
+
+
+main .siblings {
+    display: flex;
+    padding: 0;
+    margin: 100px 0;
+    justify-content: space-between;
+
+}
+
+
+.siblings img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+.siblings h3 {
+    color: #eff0f1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* siblings 2nd container */
+
+main .siblings1 {
+    display: flex;
+    padding: 0;
+    margin: 100px 0;
+    justify-content: space-between;
+
+}
+
+
+.siblings1 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+
+.siblings1 h3 {
+    color: #eff0f1;
+    text-align: center;
+    margin-top: 20px;
+}
+/* siblings 3rd container */
+main .siblings2 {
+    display: flex;
+    padding: 0;
+    margin: 100px 0;
+    justify-content: space-around;
+
+}
+
+
+.siblings2 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+
+.siblings2 h3 {
+    color: #eff0f1;
+    text-align: center;
+    margin-top: 20px;
+}
+ @media (orientation: portrait){
+    .parents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .parents h2 {
+           
+            margin-top: 20px;
+            margin-bottom: 20px;
+    }
+    .siblings, .siblings1, .siblings2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+        .siblings  h3 {
+           
+            margin-top: 20px;
+            margin-bottom: 50px;
+    }
+    .siblings1 h3 {
+           
+            margin-top: 20px;
+            margin-bottom: 50px;
+    }
+        .siblings2 h3 {
+    
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+ }
+
+
+
+
+
